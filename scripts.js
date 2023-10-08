@@ -64,6 +64,10 @@ productForm.addEventListener("submit", function(e){
     const imageValue = productImageInput.value;
     const priceValue = productPriceInput.value;
     const textValue = productTextInput.value;
+     productNameInput.value = "";
+     productImageInput.value = "";
+     productPriceInput.value = "";
+     productTextInput.value = "";
 
 // task one
 createElement(nameValue, imageValue, priceValue, textValue);
