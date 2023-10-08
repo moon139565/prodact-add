@@ -4,9 +4,11 @@ const productNameInput = document.getElementById("product-name");
 const productImageInput = document.getElementById("product-image");
 const productPriceInput = document.getElementById("product-price");
 const productTextInput = document.getElementById("product-text");
+const clearAllButton = document.getElementById("clear-all-button");
+const Singlebutton = document.getElementById("single-button");
+const singleproduct = document.querySelector(".single-product");
 
 const products = JSON.parse(localStorage.getItem("lsProduct")) || [];
-
 // add product
 const addProduct = ( nameValue, imageValue, priceValue, textValue ) => {
     products.push({
@@ -83,4 +85,12 @@ products.forEach(product => {
     product["image"],
     product["price"],
     product["text"]);
+});
+
+
+clearAllButton.addEventListener("click", () => {
+  allproductDiv.innerHTML = "";
+
+  // Clear the products array in local storage
+  localStorage.removeItem("lsProduct");
 });

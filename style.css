@@ -62,7 +62,9 @@ product-area CSS
     padding: 8px 15px;
     border-radius: 6px;
 }
-
+.cler-btn{
+    margin-top: 10px;
+}
 /* 
 Footer area CSS
 */
